@@ -12,12 +12,13 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 ## Service
 
  De service communiceert met benternet via ZMQ. Nadat de client is verbonden met de service Dobbelsteen zal de service een bericht sturen naar de client. 
- Hierin wordt er gevraagd met welke dobbelsteen er gerold zal worden Hierin is de keuze van 2 tot en met 20. Na de input van de client wordt er gecheckt of dit een geldige input is. 
- Hierna wordt een tweede bericht verzonden met de vraag hoeveel dobbelstenen er gerold zullen worden. Na het antwoord van de client wordt dit opnieuw gecheckt. Na deze 2 inputs zal de service met deze gegevens de dobbelstenen rollen en zal er een willekeurig getal worden gegenereerd wat voldoet aan de eisen van de client. 
- De service zal dit getal doorgeven aan de client. Indien er meerdere dobbelstenen werden gebruikt zal de service deze zowel apart als opgeteld doorsturen.
- Achteraf zal de service vragen of de client nog eens wilt gooien. 
- Indien ja: de service zal opnieuw vragen naar de eisen van de client.
- Indien nee: de sercive zal afsluiten.
+ Hierin wordt er gevraagd met welke dobbelsteen er gerold zal worden Hierin is de keuze van 2 tot en met 20. Na de input van de client wordt er gecheckt of dit een geldige input is. </Br>
+ Hierna wordt een tweede bericht verzonden met de vraag hoeveel dobbelstenen er gerold zullen worden. Na het antwoord van de client wordt dit opnieuw gecheckt. Na deze 2 inputs zal de service met deze gegevens de dobbelstenen rollen en zal er een willekeurig getal worden gegenereerd wat voldoet aan de eisen van de client. </Br>
+ De service zal dit getal doorgeven aan de client. </Br>
+ Indien er meerdere dobbelstenen werden gebruikt zal de service deze zowel apart als opgeteld doorsturen. </Br>
+ Achteraf zal de service vragen of de client nog eens wilt gooien.  </Br>
+ Indien ja: de service zal opnieuw vragen naar de eisen van de client. </Br>
+ Indien nee: de sercive zal afsluiten. </Br>
 
 - Protocol: TCP
 - Adres: benternet.pxl-ea-ict.be:24041
@@ -37,4 +38,10 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 - Gegenereerde waardes
 - Opgetelde waardes
 - Opnieuw rollen of afsluiten
+
+## Flowsharts
+
+![benternet](https://user-images.githubusercontent.com/79916496/234382456-24364005-af97-4c2c-9164-a18bea9d8d8a.png)
+
+
 
