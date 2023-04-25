@@ -7,7 +7,7 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 
 - Protocol: TCP
 - Adres: benternet.pxl-ea-ict.be:24042
-- Topic: bomengels>Dobbelsteen>
+- Topic: Dobbelsteen>
 
 ## Service
 
@@ -22,7 +22,7 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 
 - Protocol: TCP
 - Adres: benternet.pxl-ea-ict.be:24041
-- Topic: bomengels>Dobbelsteen1>
+- Topic: Dobbelsteen1>
 
 
 ## Requests
