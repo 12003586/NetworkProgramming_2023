@@ -37,3 +37,4 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 - Gegenereerde waardes
 - Opgetelde waardes
 - Opnieuw rollen of afsluiten
+
