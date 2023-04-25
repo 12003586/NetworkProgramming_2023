@@ -45,5 +45,4 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 
 ## Tijdsverloop
 
-
-
+![np drawio (1)](https://user-images.githubusercontent.com/79916282/234405357-d1a14057-f08a-4142-b20a-e374c6b79d2c.png)
