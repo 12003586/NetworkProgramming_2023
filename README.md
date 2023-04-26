@@ -41,8 +41,11 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 
 ## Flowsharts
 
-![benternet](https://user-images.githubusercontent.com/79916496/234382456-24364005-af97-4c2c-9164-a18bea9d8d8a.png)
+![benternet](https://user-images.githubusercontent.com/79916496/234382456-24364005-af97-4c2c-9164-a18bea9d8d8a.png) <Br>
+
+![np drawio (1)](https://user-images.githubusercontent.com/79916282/234405357-d1a14057-f08a-4142-b20a-e374c6b79d2c.png)
 
 ## Tijdsverloop
 
-![np drawio (1)](https://user-images.githubusercontent.com/79916282/234405357-d1a14057-f08a-4142-b20a-e374c6b79d2c.png)
+![tijdverloop](https://user-images.githubusercontent.com/79916496/234544324-78240069-6c5c-44ae-8b23-7341b1edf422.png)
+
