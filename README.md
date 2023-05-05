@@ -19,25 +19,38 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
  Achteraf zal de service vragen of de client nog eens wilt gooien.  </Br>
  Indien ja: de service zal opnieuw vragen naar de eisen van de client. </Br>
  Indien nee: de sercive zal afsluiten. </Br>
+ 
+ Voor een tweede deel van de taak gaan we een kaartspel gebuiken. Met dit kaartspel laten we zoals bij de dobbelsteen de gebruiker een random kaart kiezen. Er zal niet alleen de optie zijn om een random kaart te kiezen maar ook om te selecteren tussen de verschillend groepen van kaarten. Zo kan je bijvoorbeeld kiezen dat ja enkel maar met 1 kleur wilt spelen of dat je enkel maar met 1 kaarsymbool of meerdere kunt spelen. Dit kan uiteraard ook gecombineerd worden. 
+ 
+ 
+ Bij het opstarten van de client wordt er gevraagd wat ze willen doen: "kaartspel" of "dobbelstenen". Van hier uit gaan ze verder naar de gekozen optie. 
 
 - Protocol: TCP
 - Adres: benternet.pxl-ea-ict.be:24041
-- Topic: Dobbelsteen1>
+- Topic: Gambling>
 
 
 ## Requests
 - connectie met de service
+- de gekozen spel optie 
 - Het aantal gevraagde nummers op de dobbelsteen
 - Het aantal gevraagde dobbelstenen
-- Wilt de client opnieuw rollen of afsluiten
+- Wilt de client opnieuw rollen of afsluiten, een andere speloptie of stoppen
+- Wilt de client opnieuw een kaart trekken, een andere speloptie of stoppen
 
 ## Responses
-- Welkoms bericht
+- Welkoms bericht met de keuze welke optie 
+
 - Aantal nummers is geldig
 - Aantal dobbelstenen is geldig
 - Gegenereerde waardes
 - Opgetelde waardes
-- Opnieuw rollen of afsluiten
+- Opneiuw trekken, ander spel optie of afsluiten
+
+- Welke kleur kaarten
+- Welke kaarsymbolen
+- Opneiuw trekken, ander spel optie of afsluiten
+
 
 ## Flowsharts
 
