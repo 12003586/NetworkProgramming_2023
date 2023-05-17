@@ -37,3 +37,21 @@ private:
 };
 
 #endif // KAARTEN_H
+
+
+/*
+    // Ask the user for the number of cards
+    int numCards;
+    std::cout << "How many cards do you want to draw? ";
+    std::cin >> numCards;
+
+    kaarten picker(numCards);
+    QStringList cards = picker.pickCards();
+
+    // Print the drawn cards
+    std::cout << "Drawn Cards:";
+    for (const QString &card : cards) {
+        std::cout << card.toStdString() << std::endl;
+    }
+
+*/

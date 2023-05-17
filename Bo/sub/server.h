@@ -32,6 +32,10 @@ public:
         return pushTopic.length();
     }
 
+signals:
+    // Signal used to receive messages
+    void messageReceived(QString);
+
 private:
     // Self explanatory naming.
     zmq::context_t *context = new zmq::context_t(1);
@@ -39,8 +43,8 @@ private:
     zmq::socket_t *pushSocket = new zmq::socket_t(*context, ZMQ_PUSH);
     zmq::socket_t *subSocket = new zmq::socket_t(*context, ZMQ_SUB);
 
-    std::string subscribeTopic = "axelvanherle>service?>";
-    std::string pushTopic = "axelvanherle>service!>";
+    std::string subscribeTopic = "Gambling>";
+    std::string pushTopic = "Gambler>";
 
     QMap<QString, QString> idNameMap;
 
@@ -48,6 +52,6 @@ private:
     QTimer* alertTimer;
 };
 
-};
+
 
 #endif // SERVER_H

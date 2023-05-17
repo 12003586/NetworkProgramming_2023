@@ -12,7 +12,6 @@ LIBS += -L$$PWD/../lib -lzmq -lws2_32 -lIphlpapi
 INCLUDEPATH += $$PWD/../include
 
 SOURCES += \
-        dobbelsteen.cpp \
         main.cpp \
         server.cpp
 
@@ -22,6 +21,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    dobbelsteen.h \
     kaarten.h \
     server.h
