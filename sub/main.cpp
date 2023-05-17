@@ -1,3 +1,5 @@
+//Service
+
 #include <QCoreApplication>
 #include <iostream>
 #include <string>
@@ -26,7 +28,7 @@ int main(int argc, char *argv[])
     zmq::socket_t subscriber( context, ZMQ_SUB );
 //  subscriber.connect( "tcp://localhost:24042" );
     subscriber.connect( "tcp://benternet.pxl-ea-ict.be:24042" );
-    subscriber.setsockopt( ZMQ_SUBSCRIBE, "Dobbelsteen", 11 );
+    subscriber.setsockopt( ZMQ_SUBSCRIBE, "Gambling", 8 );
 
     zmq::message_t * msg = new zmq::message_t();
    // while( subscriber.connected() )
@@ -35,7 +37,7 @@ int main(int argc, char *argv[])
         std::cout << "Subscribed : [" << std::string( (char*) msg->data(), msg->size() ) << "]" << std::endl;
 
 
-        ventilator.send("Dobbelsteen1<<Hoeveel dobbelstenen?", 35 );
+        ventilator.send("Gambler>>Kaarten of Dobblestenen?", 33 );
 
     //}
 

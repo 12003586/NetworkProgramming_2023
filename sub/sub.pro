@@ -1,5 +1,5 @@
 QT -= gui
-
+QT += network
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
@@ -12,9 +12,16 @@ LIBS += -L$$PWD/../lib -lzmq -lws2_32 -lIphlpapi
 INCLUDEPATH += $$PWD/../include
 
 SOURCES += \
-        main.cpp
+        dobbelsteen.cpp \
+        main.cpp \
+        server.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+HEADERS += \
+    dobbelsteen.h \
+    kaarten.h \
+    server.h
