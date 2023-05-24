@@ -61,4 +61,5 @@ Om te verbinden met de service moet de juiste topic worden meegegeven.
 ## Tijdsverloop
 
 ![tijdverloop](https://user-images.githubusercontent.com/79916496/234544324-78240069-6c5c-44ae-8b23-7341b1edf422.png)
+![Dobbelsteen diagram](https://github.com/12003586/NetworkProgramming_2023/assets/79916282/0f739ee7-d7f3-47c9-a189-f8733c3efe2a)
 
