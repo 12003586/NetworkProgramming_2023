@@ -12,6 +12,9 @@ LIBS += -L$$PWD/../lib -lzmq -lws2_32 -lIphlpapi
 INCLUDEPATH += $$PWD/../include
 
 SOURCES += \
+        cardgame.cpp \
+        dobbelsteen.cpp \
+        inpututils.cpp \
         main.cpp \
         server.cpp
 
@@ -21,5 +24,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    kaarten.h \
+    cardgame.h \
+    dobbelsteen.h \
+    inpututils.h \
     server.h
