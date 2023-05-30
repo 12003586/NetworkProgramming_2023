@@ -1,0 +1,97 @@
+#include "card.h"
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+card::card()
+{
+    //colors = { "Rood", "Zwart" };
+    //symbols = { "Aas", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Boer", "Vrouw", "Heer" };
+    
+    pushSocket->connect( "tcp://benternet.pxl-ea-ict.be:24041" );
+    subscribeSocket->setsockopt( ZMQ_SUBSCRIBE, subscribeSubTopicCards.c_str(), subscribeSubTopicCards.length());
+    subscribeSocket->connect( "tcp://benternet.pxl-ea-ict.be:24042" );
+
+
+    try
+    {
+        while(pushSocket->connected())
+        {
+            
+            std::string numberCards = pushSubTopicCards + "Do you want to continu or go back?";
+            pushSocket->send(numberCards.c_str(),numberCards.length());
+            
+            subscribeSocket->recv(zmqBuffer);
+            std::string buffer(static_cast<char*>(zmqBuffer->data()), zmqBuffer->size());
+            
+            if(buffer.find("yes") != std::string::npos)
+            {
+                srand(static_cast<unsigned>(time(0)));
+                
+                Card randomCard = getRandomCard();
+                printCard(randomCard);
+                
+                
+            }
+            
+
+            
+            
+        }
+    }  
+    catch( zmq::error_t & ex )
+    {
+        std::cerr << "Caught an exception 1 : " << ex.what();
+    }
+    
+
+}
+
+void printCard(const Card& card) {
+    std::string rankStr;
+    std::string suitStr;
+
+    switch (card.rank) {
+        case ACE:
+            rankStr = "Ace";
+            break;
+        case JACK:
+            rankStr = "Jack";
+            break;
+        case QUEEN:
+            rankStr = "Queen";
+            break;
+        case KING:
+            rankStr = "King";
+            break;
+        default:
+            rankStr = std::to_string(card.rank);
+    }
+
+    switch (card.suit) {
+        case CLUBS:
+            suitStr = "Clubs";
+            break;
+        case DIAMONDS:
+            suitStr = "Diamonds";
+            break;
+        case HEARTS:
+            suitStr = "Hearts";
+            break;
+        case SPADES:
+            suitStr = "Spades";
+            break;
+    }
+
+    std::cout << rankStr << " of " << suitStr << std::endl;
+    
+    std::string generatedCard = rankStr + "of" + suitStr;
+    push
+}
+
+Card getRandomCard() {
+    Card card;
+    card.rank = static_cast<Rank>(1 + rand() % 13);
+    card.suit = static_cast<Suit>(rand() % 4);
+    return card;
+}
